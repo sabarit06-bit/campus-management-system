@@ -1,0 +1,17 @@
+{
+  "name": "campus-management-system",
+  "version": "1.0.0",
+  "description": "Full-stack Campus Management System",
+  "main": "backend/index.js",
+  "scripts": {
+    "start": "node backend/index.js",
+    "dev": "node backend/index.js",
+    "backend": "node backend/index.js"
+  },
+  "keywords": ["campus", "management", "system"],
+  "author": "sabarit06-bit",
+  "license": "ISC",
+  "engines": {
+    "node": "18.x"
+  }
+}
