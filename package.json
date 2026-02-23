@@ -12,6 +12,6 @@
   "author": "sabarit06-bit",
   "license": "ISC",
   "engines": {
-    "node": "18.x"
+    "node": "24.x"
   }
 }
