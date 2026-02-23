@@ -1,0 +1,241 @@
+{
+  "academic_calendar_2025_26": {
+    "semesters": [
+      {
+        "name": "Semester 1 (Odd)",
+        "year": 2025,
+        "status": "ongoing",
+        "startDate": "2025-08-01",
+        "endDate": "2025-11-30"
+      },
+      {
+        "name": "Semester 2 (Even)",
+        "year": 2026,
+        "status": "upcoming",
+        "startDate": "2026-01-05",
+        "endDate": "2026-04-30"
+      }
+    ],
+    "holidays": [
+      {
+        "title": "Independence Day",
+        "type": "national",
+        "startDate": "2025-08-15",
+        "endDate": "2025-08-15"
+      },
+      {
+        "title": "Janmashtami",
+        "type": "national",
+        "startDate": "2025-08-26",
+        "endDate": "2025-08-26"
+      },
+      {
+        "title": "Onam Festival",
+        "type": "national",
+        "startDate": "2025-09-01",
+        "endDate": "2025-09-03"
+      },
+      {
+        "title": "Ganesh Chaturthi",
+        "type": "national",
+        "startDate": "2025-09-07",
+        "endDate": "2025-09-07"
+      },
+      {
+        "title": "Mid Semester Break (Sem 1)",
+        "type": "vacation",
+        "startDate": "2025-10-02",
+        "endDate": "2025-10-08"
+      },
+      {
+        "title": "Diwali Holidays",
+        "type": "national",
+        "startDate": "2025-10-20",
+        "endDate": "2025-10-22"
+      },
+      {
+        "title": "Winter Break",
+        "type": "vacation",
+        "startDate": "2025-12-15",
+        "endDate": "2026-01-04"
+      },
+      {
+        "title": "Republic Day",
+        "type": "national",
+        "startDate": "2026-01-26",
+        "endDate": "2026-01-26"
+      },
+      {
+        "title": "Mid Semester Break (Sem 2)",
+        "type": "vacation",
+        "startDate": "2026-02-16",
+        "endDate": "2026-02-22"
+      },
+      {
+        "title": "Holi Festival",
+        "type": "national",
+        "startDate": "2026-03-14",
+        "endDate": "2026-03-16"
+      },
+      {
+        "title": "Summer Break",
+        "type": "vacation",
+        "startDate": "2026-05-01",
+        "endDate": "2026-07-31"
+      }
+    ],
+    "important_dates": [
+      {
+        "title": "Sem 1 Classes Begin",
+        "date": "2025-08-01",
+        "type": "academic"
+      },
+      {
+        "title": "Course Add/Drop Deadline (Sem 1)",
+        "date": "2025-08-14",
+        "type": "deadline"
+      },
+      {
+        "title": "Mid Term Exams (Sem 1)",
+        "date": "2025-10-10",
+        "type": "exam"
+      },
+      {
+        "title": "End Semester Exams (Sem 1)",
+        "date": "2025-12-01",
+        "type": "exam"
+      },
+      {
+        "title": "Results Published (Sem 1)",
+        "date": "2026-01-02",
+        "type": "result"
+      },
+      {
+        "title": "Sem 2 Classes Begin",
+        "date": "2026-01-05",
+        "type": "academic"
+      },
+      {
+        "title": "Course Add/Drop Deadline (Sem 2)",
+        "date": "2026-01-18",
+        "type": "deadline"
+      },
+      {
+        "title": "Mid Term Exams (Sem 2)",
+        "date": "2026-02-23",
+        "type": "exam"
+      },
+      {
+        "title": "End Semester Exams (Sem 2)",
+        "date": "2026-04-15",
+        "type": "exam"
+      },
+      {
+        "title": "Results Published (Sem 2)",
+        "date": "2026-04-30",
+        "type": "result"
+      }
+    ],
+    "timetable_sample": [
+      {
+        "day": "Monday",
+        "startTime": "09:00 AM",
+        "endTime": "10:30 AM",
+        "subject": "Data Structures",
+        "room": "Lab-01",
+        "teacher": "Dr. Karthik Iyer",
+        "students": ["231cg001", "231cg002", "231cg003"]
+      },
+      {
+        "day": "Monday",
+        "startTime": "10:45 AM",
+        "endTime": "12:15 PM",
+        "subject": "Web Development",
+        "room": "Lab-02",
+        "teacher": "Dr. Karthik Iyer",
+        "students": ["231cg001", "231cg002"]
+      },
+      {
+        "day": "Monday",
+        "startTime": "01:00 PM",
+        "endTime": "02:30 PM",
+        "subject": "Database Management",
+        "room": "Classroom-A",
+        "teacher": "Prof. Anita Rao",
+        "students": ["231cg001", "231cg003"]
+      },
+      {
+        "day": "Tuesday",
+        "startTime": "09:00 AM",
+        "endTime": "10:30 AM",
+        "subject": "Web Development",
+        "room": "Lab-02",
+        "teacher": "Dr. Karthik Iyer",
+        "students": ["231cg001", "231cg002"]
+      },
+      {
+        "day": "Tuesday",
+        "startTime": "10:45 AM",
+        "endTime": "12:15 PM",
+        "subject": "Database Management",
+        "room": "Classroom-A",
+        "teacher": "Prof. Anita Rao",
+        "students": ["231cg001", "231cg003"]
+      },
+      {
+        "day": "Wednesday",
+        "startTime": "09:00 AM",
+        "endTime": "10:30 AM",
+        "subject": "Data Structures",
+        "room": "Lab-01",
+        "teacher": "Dr. Karthik Iyer",
+        "students": ["231cg001", "231cg002", "231cg003"]
+      },
+      {
+        "day": "Wednesday",
+        "startTime": "10:45 AM",
+        "endTime": "12:15 PM",
+        "subject": "Algorithms",
+        "room": "Classroom-B",
+        "teacher": "Prof. Deepak Singh",
+        "students": ["231cg001", "231cg004"]
+      },
+      {
+        "day": "Thursday",
+        "startTime": "09:00 AM",
+        "endTime": "10:30 AM",
+        "subject": "Database Management",
+        "room": "Classroom-A",
+        "teacher": "Prof. Anita Rao",
+        "students": ["231cg001", "231cg003"]
+      },
+      {
+        "day": "Thursday",
+        "startTime": "10:45 AM",
+        "endTime": "12:15 PM",
+        "subject": "Algorithms",
+        "room": "Classroom-B",
+        "teacher": "Prof. Deepak Singh",
+        "students": ["231cg001", "231cg004"]
+      },
+      {
+        "day": "Friday",
+        "startTime": "09:00 AM",
+        "endTime": "10:30 AM",
+        "subject": "Data Structures Lab",
+        "room": "Lab-01",
+        "teacher": "Dr. Karthik Iyer",
+        "students": ["231cg001", "231cg002", "231cg003"]
+      },
+      {
+        "day": "Friday",
+        "startTime": "10:45 AM",
+        "endTime": "12:15 PM",
+        "subject": "Web Development Project",
+        "room": "Lab-03",
+        "teacher": "Dr. Karthik Iyer",
+        "students": ["231cg001", "231cg002"]
+      }
+    ]
+  }
+}
