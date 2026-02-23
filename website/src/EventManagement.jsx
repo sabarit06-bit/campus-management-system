@@ -37,7 +37,7 @@ export default function EventManagement() {
 
   const fetchEvents = async () => {
     try {
-      const res = await fetch('http://localhost:4000/api/events');
+      const res = await fetch('https://campus-management-system-production.up.railway.app/api/events');
       const data = await res.json();
       setEvents(data);
       setLoading(false);
@@ -58,8 +58,8 @@ export default function EventManagement() {
     try {
       const method = editingId ? 'PUT' : 'POST';
       const url = editingId 
-        ? `http://localhost:4000/api/events/${editingId}`
-        : 'http://localhost:4000/api/events';
+        ? `https://campus-management-system-production.up.railway.app/api/events/${editingId}`
+        : 'https://campus-management-system-production.up.railway.app/api/events';
 
       const payload = {
         ...formData,
@@ -109,7 +109,7 @@ export default function EventManagement() {
     if (!window.confirm('Are you sure you want to delete this event?')) return;
 
     try {
-      const res = await fetch(`http://localhost:4000/api/events/${eventId}`, {
+      const res = await fetch(`https://campus-management-system-production.up.railway.app/api/events/${eventId}`, {
         method: 'DELETE',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ userRole: user?.role || 'admin' })

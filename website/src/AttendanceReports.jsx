@@ -13,7 +13,7 @@ export default function AttendanceReports() {
 
   const fetchAttendanceData = async () => {
     try {
-      const response = await fetch('http://localhost:4000/api/attendance');
+      const response = await fetch('https://campus-management-system-production.up.railway.app/api/attendance');
       const records = await response.json();
       
       // Group by department

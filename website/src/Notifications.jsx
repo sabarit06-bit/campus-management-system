@@ -19,7 +19,7 @@ export default function Notifications() {
   }, [regNo]);
 
   const fetchNotifications = () => {
-    fetch(`http://localhost:4000/api/notifications/student/${regNo}`)
+    fetch(`https://campus-management-system-production.up.railway.app/api/notifications/student/${regNo}`)
       .then(res => res.json())
       .then(data => {
         setNotifications(data);
@@ -62,7 +62,7 @@ export default function Notifications() {
   });
 
   const handleMarkAsRead = (id) => {
-    fetch(`http://localhost:4000/api/notifications/${id}/mark-read`, {
+    fetch(`https://campus-management-system-production.up.railway.app/api/notifications/${id}/mark-read`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ studentId: regNo })
@@ -74,7 +74,7 @@ export default function Notifications() {
   };
 
   const handleMarkAsUnread = (id) => {
-    fetch(`http://localhost:4000/api/notifications/${id}/mark-unread`, {
+    fetch(`https://campus-management-system-production.up.railway.app/api/notifications/${id}/mark-unread`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ studentId: regNo })
@@ -89,7 +89,7 @@ export default function Notifications() {
     const unreadNotifications = notifications.filter(n => !n.read);
     Promise.all(
       unreadNotifications.map(notif =>
-        fetch(`http://localhost:4000/api/notifications/${notif.id}/mark-read`, {
+        fetch(`https://campus-management-system-production.up.railway.app/api/notifications/${notif.id}/mark-read`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ studentId: regNo })

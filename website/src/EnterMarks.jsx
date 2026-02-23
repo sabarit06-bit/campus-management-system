@@ -16,8 +16,8 @@ export default function EnterMarks() {
   const fetchData = async () => {
     try {
       const [studentRes, subjectRes] = await Promise.all([
-        fetch('http://localhost:4000/api/students', { headers: { 'x-user-role': 'teacher' } }),
-        fetch('http://localhost:4000/api/subjects', { headers: { 'x-user-role': 'teacher' } })
+        fetch('https://campus-management-system-production.up.railway.app/api/students', { headers: { 'x-user-role': 'teacher' } }),
+        fetch('https://campus-management-system-production.up.railway.app/api/subjects', { headers: { 'x-user-role': 'teacher' } })
       ]);
       const studentData = await studentRes.json();
       const subjectData = await subjectRes.json();
@@ -72,7 +72,7 @@ export default function EnterMarks() {
         if (marksData.internal || marksData.semester) {
           const student = students.find(s => s.id == studentId);
           const grade = calculateGrade(marksData.internal, marksData.semester);
-          await fetch('http://localhost:4000/api/marks', {
+          await fetch('https://campus-management-system-production.up.railway.app/api/marks', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',

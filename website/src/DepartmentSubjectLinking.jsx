@@ -13,9 +13,9 @@ function DepartmentSubjectLinking() {
 
   useEffect(() => {
     Promise.all([
-      fetch("http://localhost:4000/api/departments").then(r => r.json()),
-      fetch("http://localhost:4000/api/subjects").then(r => r.json()),
-      fetch("http://localhost:4000/api/department-subjects").then(r => r.json()),
+      fetch("https://campus-management-system-production.up.railway.app/api/departments").then(r => r.json()),
+      fetch("https://campus-management-system-production.up.railway.app/api/subjects").then(r => r.json()),
+      fetch("https://campus-management-system-production.up.railway.app/api/department-subjects").then(r => r.json()),
     ]).then(([deps, subs, links]) => {
       setDepartments(deps);
       setSubjects(subs);
@@ -46,7 +46,7 @@ function DepartmentSubjectLinking() {
     setSaveLoading(true);
     setSaveError("");
     try {
-      const res = await fetch(`http://localhost:4000/api/department-subjects/${editDept}`, {
+      const res = await fetch(`https://campus-management-system-production.up.railway.app/api/department-subjects/${editDept}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

@@ -8,7 +8,7 @@ export default function AcademicCalendar() {
   useEffect(() => {
     const fetchCalendar = async () => {
       try {
-        const res = await fetch('http://localhost:4000/api/calendar');
+        const res = await fetch('https://campus-management-system-production.up.railway.app/api/calendar');
         const data = await res.json();
         setCalendar(data);
         setLoading(false);

@@ -7,7 +7,7 @@ function AssignmentSubmission({ user }) {
   const [submitting, setSubmitting] = useState(false);
 
   useEffect(() => {
-    fetch('http://localhost:4000/api/assignments')
+    fetch('https://campus-management-system-production.up.railway.app/api/assignments')
       .then(res => res.json())
       .then(data => setAssignments(data))
       .catch(err => console.error(err));
@@ -21,7 +21,7 @@ function AssignmentSubmission({ user }) {
 
     setSubmitting(true);
     try {
-      const res = await fetch(`http://localhost:4000/api/assignments/${selectedAssignment.id}/submit`, {
+      const res = await fetch(`https://campus-management-system-production.up.railway.app/api/assignments/${selectedAssignment.id}/submit`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

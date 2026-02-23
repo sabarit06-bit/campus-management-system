@@ -8,7 +8,7 @@ function ExamPortal({ user }) {
   const regNo = user?.regNo || (user?.email && user.email.split('@')[0]);
 
   useEffect(() => {
-    fetch('http://localhost:4000/api/exams')
+    fetch('https://campus-management-system-production.up.railway.app/api/exams')
       .then(res => res.json())
       .then(data => {
         setExams(data);
@@ -19,7 +19,7 @@ function ExamPortal({ user }) {
 
   const enrollExam = async (examId) => {
     try {
-      const res = await fetch('http://localhost:4000/api/exams/enroll', {
+      const res = await fetch('https://campus-management-system-production.up.railway.app/api/exams/enroll', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ regNo, examId })

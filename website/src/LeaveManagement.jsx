@@ -10,7 +10,7 @@ function LeaveManagement({ user }) {
   });
 
   useEffect(() => {
-    fetch('http://localhost:4000/api/leaves')
+    fetch('https://campus-management-system-production.up.railway.app/api/leaves')
       .then(res => res.json())
       .then(data => setLeaves(data))
       .catch(err => console.error(err));
@@ -23,7 +23,7 @@ function LeaveManagement({ user }) {
     }
 
     try {
-      const res = await fetch('http://localhost:4000/api/leaves', {
+      const res = await fetch('https://campus-management-system-production.up.railway.app/api/leaves', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

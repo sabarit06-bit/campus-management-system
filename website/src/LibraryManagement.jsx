@@ -9,8 +9,8 @@ function LibraryManagement({ user }) {
 
   useEffect(() => {
     Promise.all([
-      fetch('http://localhost:4000/api/library/books').then(r => r.json()),
-      regNo ? fetch(`http://localhost:4000/api/library/issued-books/${regNo}`).then(r => r.json()) : Promise.resolve([])
+      fetch('https://campus-management-system-production.up.railway.app/api/library/books').then(r => r.json()),
+      regNo ? fetch(`https://campus-management-system-production.up.railway.app/api/library/issued-books/${regNo}`).then(r => r.json()) : Promise.resolve([])
     ])
     .then(([booksData, issuedData]) => {
       setBooks(booksData);
@@ -22,7 +22,7 @@ function LibraryManagement({ user }) {
 
   const issueBook = async (bookId) => {
     try {
-      const res = await fetch('http://localhost:4000/api/library/issue', {
+      const res = await fetch('https://campus-management-system-production.up.railway.app/api/library/issue', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -43,7 +43,7 @@ function LibraryManagement({ user }) {
 
   const returnBook = async (issueId) => {
     try {
-      const res = await fetch('http://localhost:4000/api/library/return', {
+      const res = await fetch('https://campus-management-system-production.up.railway.app/api/library/return', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ issueId })

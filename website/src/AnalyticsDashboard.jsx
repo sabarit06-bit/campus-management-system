@@ -22,12 +22,12 @@ export default function AnalyticsDashboard() {
   const fetchAnalyticsData = async () => {
     try {
       const [students, teachers, depts, subjects, attendance, marks] = await Promise.all([
-        fetch('http://localhost:4000/api/students').then(r => r.json()),
-        fetch('http://localhost:4000/api/teachers').then(r => r.json()),
-        fetch('http://localhost:4000/api/departments').then(r => r.json()),
-        fetch('http://localhost:4000/api/subjects').then(r => r.json()),
-        fetch('http://localhost:4000/api/attendance').then(r => r.json()),
-        fetch('http://localhost:4000/api/marks').then(r => r.json())
+        fetch('https://campus-management-system-production.up.railway.app/api/students').then(r => r.json()),
+        fetch('https://campus-management-system-production.up.railway.app/api/teachers').then(r => r.json()),
+        fetch('https://campus-management-system-production.up.railway.app/api/departments').then(r => r.json()),
+        fetch('https://campus-management-system-production.up.railway.app/api/subjects').then(r => r.json()),
+        fetch('https://campus-management-system-production.up.railway.app/api/attendance').then(r => r.json()),
+        fetch('https://campus-management-system-production.up.railway.app/api/marks').then(r => r.json())
       ]);
 
       // Calculate average attendance

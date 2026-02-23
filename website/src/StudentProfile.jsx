@@ -22,7 +22,7 @@ export default function StudentProfile() {
         return;
       }
 
-      const response = await fetch(`http://localhost:4000/api/students/lookup/${encodeURIComponent(regNo)}`);
+      const response = await fetch(`https://campus-management-system-production.up.railway.app/api/students/lookup/${encodeURIComponent(regNo)}`);
       if (!response.ok) {
         if (response.status === 404) {
           setError('Student profile not found in database');

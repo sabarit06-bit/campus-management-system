@@ -17,7 +17,7 @@ function DepartmentManagement() {
   const [deleteError, setDeleteError] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:4000/api/departments")
+    fetch("https://campus-management-system-production.up.railway.app/api/departments")
       .then((res) => res.json())
       .then((data) => {
         setDepartments(data);
@@ -38,7 +38,7 @@ function DepartmentManagement() {
     setAddError("");
     setAddLoading(true);
     try {
-      const res = await fetch("http://localhost:4000/api/departments", {
+      const res = await fetch("https://campus-management-system-production.up.railway.app/api/departments", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -76,7 +76,7 @@ function DepartmentManagement() {
     setEditError("");
     setEditLoading(true);
     try {
-      const res = await fetch(`http://localhost:4000/api/departments/${editId}`, {
+      const res = await fetch(`https://campus-management-system-production.up.railway.app/api/departments/${editId}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -107,7 +107,7 @@ function DepartmentManagement() {
     setDeleteLoading(true);
     setDeleteError("");
     try {
-      const res = await fetch(`http://localhost:4000/api/departments/${deleteId}`, {
+      const res = await fetch(`https://campus-management-system-production.up.railway.app/api/departments/${deleteId}`, {
         method: "DELETE",
         headers: {
           "x-user-role": "admin"

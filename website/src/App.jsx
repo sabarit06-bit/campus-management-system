@@ -111,7 +111,7 @@ function Navbar({ onLoginClick, user, onLogout }) {
 function Hero() {
   const [modules, setModules] = useState([]);
   useEffect(() => {
-    fetch('http://localhost:4000/api/modules')
+    fetch('https://campus-management-system-production.up.railway.app/api/modules')
       .then(res => res.json())
       .then(data => setModules(data));
   }, []);
@@ -170,7 +170,7 @@ function Features() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
   useEffect(() => {
-    fetch('http://localhost:4000/api/features')
+    fetch('https://campus-management-system-production.up.railway.app/api/features')
       .then(res => res.json())
       .then(data => { setFeatures(data); setLoading(false); })
       .catch(() => { setError('Failed to load features.'); setLoading(false); });
@@ -197,7 +197,7 @@ function Pricing() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
   useEffect(() => {
-    fetch('http://localhost:4000/api/pricing')
+    fetch('https://campus-management-system-production.up.railway.app/api/pricing')
       .then(res => res.json())
       .then(data => { setPlans(data); setLoading(false); })
       .catch(() => { setError('Failed to load pricing.'); setLoading(false); });
@@ -301,7 +301,7 @@ function LoginModal({ open, onClose }) {
       }
 
       // Try student login first
-      let studentRes = await fetch('http://localhost:4000/api/students/login', {
+      let studentRes = await fetch('https://campus-management-system-production.up.railway.app/api/students/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ regNo: credentials, password: pass })
@@ -313,7 +313,7 @@ function LoginModal({ open, onClose }) {
         role = 'student';
       } else if (studentRes.status === 401) {
         // Invalid credentials for student, try teacher
-        let teacherRes = await fetch('http://localhost:4000/api/teachers/login', {
+        let teacherRes = await fetch('https://campus-management-system-production.up.railway.app/api/teachers/login', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ regNo: credentials, password: pass })

@@ -22,8 +22,8 @@ export default function UploadAssignments() {
     setLoading(true);
     try {
       const [assignRes, subjectRes] = await Promise.all([
-        fetch('http://localhost:4000/api/assignments', { headers: { 'x-user-role': 'teacher' } }),
-        fetch('http://localhost:4000/api/subjects', { headers: { 'x-user-role': 'teacher' } })
+        fetch('https://campus-management-system-production.up.railway.app/api/assignments', { headers: { 'x-user-role': 'teacher' } }),
+        fetch('https://campus-management-system-production.up.railway.app/api/subjects', { headers: { 'x-user-role': 'teacher' } })
       ]);
       const assignData = await assignRes.json();
       const subjectData = await subjectRes.json();
@@ -56,7 +56,7 @@ export default function UploadAssignments() {
     try {
       if (editingId) {
         // Update existing
-        await fetch(`http://localhost:4000/api/assignments/${editingId}`, {
+        await fetch(`https://campus-management-system-production.up.railway.app/api/assignments/${editingId}`, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',
@@ -67,7 +67,7 @@ export default function UploadAssignments() {
         setMessage('✓ Assignment updated successfully!');
       } else {
         // Create new
-        await fetch('http://localhost:4000/api/assignments', {
+        await fetch('https://campus-management-system-production.up.railway.app/api/assignments', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -99,7 +99,7 @@ export default function UploadAssignments() {
     if (!confirm('Are you sure you want to delete this assignment?')) return;
 
     try {
-      await fetch(`http://localhost:4000/api/assignments/${id}`, {
+      await fetch(`https://campus-management-system-production.up.railway.app/api/assignments/${id}`, {
         method: 'DELETE',
         headers: { 'x-user-role': 'teacher' }
       });

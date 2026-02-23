@@ -8,7 +8,7 @@ function Forum({ user }) {
   const [formData, setFormData] = useState({ title: '', content: '' });
 
   useEffect(() => {
-    fetch('http://localhost:4000/api/forum/topics')
+    fetch('https://campus-management-system-production.up.railway.app/api/forum/topics')
       .then(res => res.json())
       .then(data => setTopics(data))
       .catch(err => console.error(err));
@@ -18,7 +18,7 @@ function Forum({ user }) {
     if (!formData.title.trim() || !formData.content.trim()) return;
     
     try {
-      const res = await fetch('http://localhost:4000/api/forum/topics', {
+      const res = await fetch('https://campus-management-system-production.up.railway.app/api/forum/topics', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

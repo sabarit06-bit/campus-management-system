@@ -9,8 +9,8 @@ function PlacementPortal({ user }) {
 
   useEffect(() => {
     Promise.all([
-      fetch('http://localhost:4000/api/placements').then(r => r.json()),
-      regNo ? fetch(`http://localhost:4000/api/placements/applications/${regNo}`).then(r => r.json()) : Promise.resolve([])
+      fetch('https://campus-management-system-production.up.railway.app/api/placements').then(r => r.json()),
+      regNo ? fetch(`https://campus-management-system-production.up.railway.app/api/placements/applications/${regNo}`).then(r => r.json()) : Promise.resolve([])
     ])
     .then(([placementsData, applicationsData]) => {
       setPlacements(placementsData);
@@ -22,7 +22,7 @@ function PlacementPortal({ user }) {
 
   const applyJob = async (placementId) => {
     try {
-      const res = await fetch('http://localhost:4000/api/placements/apply', {
+      const res = await fetch('https://campus-management-system-production.up.railway.app/api/placements/apply', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ regNo, placementId })

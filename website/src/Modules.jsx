@@ -18,7 +18,7 @@ function Modules({ role }) {
   const [deleteError, setDeleteError] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:4000/api/modules")
+    fetch("https://campus-management-system-production.up.railway.app/api/modules")
       .then((res) => res.json())
       .then((data) => {
         setModules(data);
@@ -39,7 +39,7 @@ function Modules({ role }) {
     setAddError("");
     setAddLoading(true);
     try {
-      const res = await fetch("http://localhost:4000/api/modules", {
+      const res = await fetch("https://campus-management-system-production.up.railway.app/api/modules", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -77,7 +77,7 @@ function Modules({ role }) {
     setEditError("");
     setEditLoading(true);
     try {
-      const res = await fetch(`http://localhost:4000/api/modules/${editId}`, {
+      const res = await fetch(`https://campus-management-system-production.up.railway.app/api/modules/${editId}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -108,7 +108,7 @@ function Modules({ role }) {
     setDeleteLoading(true);
     setDeleteError("");
     try {
-      const res = await fetch(`http://localhost:4000/api/modules/${deleteId}`, {
+      const res = await fetch(`https://campus-management-system-production.up.railway.app/api/modules/${deleteId}`, {
         method: "DELETE",
         headers: {
           "x-user-role": "admin"

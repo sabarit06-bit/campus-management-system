@@ -13,7 +13,7 @@ export default function MarksReports() {
 
   const fetchMarksData = async () => {
     try {
-      const response = await fetch('http://localhost:4000/api/marks');
+      const response = await fetch('https://campus-management-system-production.up.railway.app/api/marks');
       const records = await response.json();
 
       // Generate subject-wise data

@@ -9,7 +9,7 @@ export default function StudentTimetable() {
     const regNo = user.regNo;
 
     if (regNo) {
-      fetch(`http://localhost:4000/api/timetable/student/${regNo}`)
+      fetch(`https://campus-management-system-production.up.railway.app/api/timetable/student/${regNo}`)
         .then(res => res.json())
         .then(data => {
           setTimetable(data);

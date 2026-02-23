@@ -13,7 +13,7 @@ export default function ViewClasses() {
   const fetchClasses = async () => {
     setLoading(true);
     try {
-      const res = await fetch('http://localhost:4000/api/classes', {
+      const res = await fetch('https://campus-management-system-production.up.railway.app/api/classes', {
         headers: { 'x-user-role': 'teacher' }
       });
       const data = await res.json();

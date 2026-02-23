@@ -51,7 +51,7 @@ export default function BatchOperations() {
             ? { name: records[i].name, regNo: records[i].regNo, department: records[i].department, year: records[i].year }
             : { name: records[i].name, regNo: records[i].regNo, department: records[i].department, specialization: 'TBD' };
 
-          await fetch(`http://localhost:4000${endpoint}`, {
+          await fetch(`https://campus-management-system-production.up.railway.app${endpoint}`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json', 'x-user-role': 'admin' },
             body: JSON.stringify(payload)

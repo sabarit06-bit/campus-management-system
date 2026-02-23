@@ -17,7 +17,7 @@ function SubjectManagement() {
   const [deleteError, setDeleteError] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:4000/api/subjects")
+    fetch("https://campus-management-system-production.up.railway.app/api/subjects")
       .then((res) => res.json())
       .then((data) => {
         setSubjects(data);
@@ -38,7 +38,7 @@ function SubjectManagement() {
     setAddError("");
     setAddLoading(true);
     try {
-      const res = await fetch("http://localhost:4000/api/subjects", {
+      const res = await fetch("https://campus-management-system-production.up.railway.app/api/subjects", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -76,7 +76,7 @@ function SubjectManagement() {
     setEditError("");
     setEditLoading(true);
     try {
-      const res = await fetch(`http://localhost:4000/api/subjects/${editId}`, {
+      const res = await fetch(`https://campus-management-system-production.up.railway.app/api/subjects/${editId}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -107,7 +107,7 @@ function SubjectManagement() {
     setDeleteLoading(true);
     setDeleteError("");
     try {
-      const res = await fetch(`http://localhost:4000/api/subjects/${deleteId}`, {
+      const res = await fetch(`https://campus-management-system-production.up.railway.app/api/subjects/${deleteId}`, {
         method: "DELETE",
         headers: {
           "x-user-role": "admin"

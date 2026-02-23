@@ -16,7 +16,7 @@ export default function StudentMarksGrades() {
 
   const fetchMarks = async () => {
     try {
-      const response = await fetch(`http://localhost:4000/api/marks/student/${encodeURIComponent(studentRegNo)}`);
+      const response = await fetch(`https://campus-management-system-production.up.railway.app/api/marks/student/${encodeURIComponent(studentRegNo)}`);
       const data = await response.json();
       setMarks(data || []);
       setLoading(false);

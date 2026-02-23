@@ -22,8 +22,8 @@ export default function UserManagement() {
     const fetchUsers = async () => {
       try {
         const [studentsRes, teachersRes] = await Promise.all([
-          fetch('http://localhost:4000/api/students'),
-          fetch('http://localhost:4000/api/teachers')
+          fetch('https://campus-management-system-production.up.railway.app/api/students'),
+          fetch('https://campus-management-system-production.up.railway.app/api/teachers')
         ]);
         
         const students = await studentsRes.json();

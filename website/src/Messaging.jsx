@@ -13,8 +13,8 @@ function Messaging({ user }) {
     if (!currentId) return;
 
     Promise.all([
-      fetch('http://localhost:4000/api/teachers').then(res => res.json()),
-      fetch('http://localhost:4000/api/students').then(res => res.json())
+      fetch('https://campus-management-system-production.up.railway.app/api/teachers').then(res => res.json()),
+      fetch('https://campus-management-system-production.up.railway.app/api/students').then(res => res.json())
     ])
       .then(([teachersData, studentsData]) => {
         const teacherContacts = (teachersData || []).map(t => ({
@@ -35,7 +35,7 @@ function Messaging({ user }) {
 
   useEffect(() => {
     if (!selectedUser || !currentId) return;
-    fetch(`http://localhost:4000/api/messages/${currentId}`)
+    fetch(`https://campus-management-system-production.up.railway.app/api/messages/${currentId}`)
       .then(res => res.json())
       .then(data => setMessages(data))
       .catch(err => console.error(err));
@@ -46,7 +46,7 @@ function Messaging({ user }) {
 
     setLoading(true);
     try {
-      const res = await fetch('http://localhost:4000/api/messages', {
+      const res = await fetch('https://campus-management-system-production.up.railway.app/api/messages', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

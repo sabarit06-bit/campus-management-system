@@ -10,7 +10,7 @@ function ComplaintSystem({ user }) {
   const [showForm, setShowForm] = useState(false);
 
   useEffect(() => {
-    fetch('http://localhost:4000/api/complaints')
+    fetch('https://campus-management-system-production.up.railway.app/api/complaints')
       .then(res => res.json())
       .then(data => setComplaints(data))
       .catch(err => console.error(err));
@@ -23,7 +23,7 @@ function ComplaintSystem({ user }) {
     }
 
     try {
-      const res = await fetch('http://localhost:4000/api/complaints', {
+      const res = await fetch('https://campus-management-system-production.up.railway.app/api/complaints', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

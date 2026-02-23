@@ -17,7 +17,7 @@ export default function StudentAttendancePercentage() {
 
   const fetchAttendance = async () => {
     try {
-      const response = await fetch(`http://localhost:4000/api/attendance/${encodeURIComponent(studentRegNo)}`);
+      const response = await fetch(`https://campus-management-system-production.up.railway.app/api/attendance/${encodeURIComponent(studentRegNo)}`);
       const data = await response.json();
       
       if (data && data.length > 0) {

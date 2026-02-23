@@ -11,7 +11,7 @@ export default function StudentCoCurricular() {
     const regNo = user.regNo;
 
     if (regNo) {
-      fetch(`http://localhost:4000/api/activities/student/${regNo}`)
+      fetch(`https://campus-management-system-production.up.railway.app/api/activities/student/${regNo}`)
         .then(res => res.json())
         .then(data => {
           setActivities(data);

@@ -13,7 +13,7 @@ export default function MarkAttendance() {
 
   const fetchStudents = async () => {
     try {
-      const res = await fetch('http://localhost:4000/api/students', {
+      const res = await fetch('https://campus-management-system-production.up.railway.app/api/students', {
         headers: { 'x-user-role': 'teacher' }
       });
       const data = await res.json();
@@ -39,7 +39,7 @@ export default function MarkAttendance() {
     
     try {
       for (const [studentRegNo, status] of Object.entries(attendance)) {
-        await fetch('http://localhost:4000/api/attendance', {
+        await fetch('https://campus-management-system-production.up.railway.app/api/attendance', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

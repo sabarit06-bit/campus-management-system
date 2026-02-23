@@ -182,7 +182,7 @@ function AdminDataManager({ user }) {
     setLoading(true);
 
     try {
-      const res = await fetch('http://localhost:4000/api/admin/seed', {
+      const res = await fetch('https://campus-management-system-production.up.railway.app/api/admin/seed', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

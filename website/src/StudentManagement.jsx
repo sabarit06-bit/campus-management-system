@@ -17,7 +17,7 @@ function StudentManagement() {
   const [deleteError, setDeleteError] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:4000/api/students")
+    fetch("https://campus-management-system-production.up.railway.app/api/students")
       .then((res) => res.json())
       .then((data) => {
         setStudents(data);
@@ -38,7 +38,7 @@ function StudentManagement() {
     setAddError("");
     setAddLoading(true);
     try {
-      const res = await fetch("http://localhost:4000/api/students", {
+      const res = await fetch("https://campus-management-system-production.up.railway.app/api/students", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -76,7 +76,7 @@ function StudentManagement() {
     setEditError("");
     setEditLoading(true);
     try {
-      const res = await fetch(`http://localhost:4000/api/students/${editId}`, {
+      const res = await fetch(`https://campus-management-system-production.up.railway.app/api/students/${editId}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -107,7 +107,7 @@ function StudentManagement() {
     setDeleteLoading(true);
     setDeleteError("");
     try {
-      const res = await fetch(`http://localhost:4000/api/students/${deleteId}`, {
+      const res = await fetch(`https://campus-management-system-production.up.railway.app/api/students/${deleteId}`, {
         method: "DELETE",
         headers: {
           "x-user-role": "admin"

@@ -17,7 +17,7 @@ function TeacherManagement() {
   const [deleteError, setDeleteError] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:4000/api/teachers")
+    fetch("https://campus-management-system-production.up.railway.app/api/teachers")
       .then((res) => res.json())
       .then((data) => {
         setTeachers(data);
@@ -38,7 +38,7 @@ function TeacherManagement() {
     setAddError("");
     setAddLoading(true);
     try {
-      const res = await fetch("http://localhost:4000/api/teachers", {
+      const res = await fetch("https://campus-management-system-production.up.railway.app/api/teachers", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -76,7 +76,7 @@ function TeacherManagement() {
     setEditError("");
     setEditLoading(true);
     try {
-      const res = await fetch(`http://localhost:4000/api/teachers/${editId}`, {
+      const res = await fetch(`https://campus-management-system-production.up.railway.app/api/teachers/${editId}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -107,7 +107,7 @@ function TeacherManagement() {
     setDeleteLoading(true);
     setDeleteError("");
     try {
-      const res = await fetch(`http://localhost:4000/api/teachers/${deleteId}`, {
+      const res = await fetch(`https://campus-management-system-production.up.railway.app/api/teachers/${deleteId}`, {
         method: "DELETE",
         headers: {
           "x-user-role": "admin"

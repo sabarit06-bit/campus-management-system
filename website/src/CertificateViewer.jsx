@@ -8,7 +8,7 @@ function CertificateViewer({ user }) {
 
   useEffect(() => {
     if (regNo) {
-      fetch(`http://localhost:4000/api/certificates/${regNo}`)
+      fetch(`https://campus-management-system-production.up.railway.app/api/certificates/${regNo}`)
         .then(res => res.json())
         .then(data => {
           setCertificates(data);

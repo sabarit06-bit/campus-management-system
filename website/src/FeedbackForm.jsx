@@ -13,8 +13,8 @@ function FeedbackForm({ user }) {
 
   useEffect(() => {
     Promise.all([
-      fetch('http://localhost:4000/api/teachers').then(res => res.json()),
-      fetch('http://localhost:4000/api/subjects').then(res => res.json())
+      fetch('https://campus-management-system-production.up.railway.app/api/teachers').then(res => res.json()),
+      fetch('https://campus-management-system-production.up.railway.app/api/subjects').then(res => res.json())
     ])
       .then(([teachersData, subjectsData]) => {
         const teacherOptions = (teachersData || []).map(t => ({ id: t.regNo, name: t.name }));
@@ -32,7 +32,7 @@ function FeedbackForm({ user }) {
     }
 
     try {
-      const res = await fetch('http://localhost:4000/api/feedback', {
+      const res = await fetch('https://campus-management-system-production.up.railway.app/api/feedback', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

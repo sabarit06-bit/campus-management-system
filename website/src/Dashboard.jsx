@@ -14,7 +14,7 @@ function AdminDashboard() {
   useEffect(() => {
     const fetchStats = async () => {
       try {
-        const response = await fetch('http://localhost:4000/api/stats/count');
+        const response = await fetch('https://campus-management-system-production.up.railway.app/api/stats/count');
         const data = await response.json();
         setStats([
           { label: "Total Students", value: String(data.students), icon: "👥", color: "from-blue-500 to-cyan-500" },
@@ -105,7 +105,7 @@ function TeacherDashboard({ user }) {
       return;
     }
 
-    fetch(`http://localhost:4000/api/classes/teacher/${teacherId}`)
+    fetch(`https://campus-management-system-production.up.railway.app/api/classes/teacher/${teacherId}`)
       .then(res => {
         if (!res.ok) throw new Error('Network response was not ok');
         return res.json();
@@ -250,11 +250,11 @@ function StudentDashboard({ user }) {
         }
 
         // Fetch enrolled classes (official courses)
-        const classesRes = await fetch(`http://localhost:4000/api/classes/student/${regNo}`);
+        const classesRes = await fetch(`https://campus-management-system-production.up.railway.app/api/classes/student/${regNo}`);
         const studentClasses = await classesRes.json();
         
         // Fetch timetable slots
-        const timetableRes = await fetch(`http://localhost:4000/api/timetable/student/${regNo}`);
+        const timetableRes = await fetch(`https://campus-management-system-production.up.railway.app/api/timetable/student/${regNo}`);
         const timetableSlots = await timetableRes.json();
 
         // Get unique subjects from timetable
